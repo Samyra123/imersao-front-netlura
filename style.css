@@ -1,0 +1,224 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: radial-gradient(circle at top, #b20710 0%, #000 60%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.conteudo-principal {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.logo-netflix {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+}
+
+.logo-netflix img {
+    width: 120px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: -0.5px;
+}
+
+.lista-perfis {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 60px;
+    list-style: none;
+    padding: 0;
+}
+
+.item-perfil {
+    width: 10vw;
+    min-width: 120px;
+    max-width: 200px;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.perfil:hover {
+    transform: translateY(-5px);
+}
+
+/* ---------- AVATAR ---------- */
+
+.avatar-container {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icone-avatar {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.icone-avatar img {
+   width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* ---------- NOME ---------- */
+
+.nome-perfil {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #fff;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    letter-spacing: 0.2px;
+}
+
+/* ---------- HOVER UNIFICADO ---------- */
+
+.perfil:hover img {
+    transform: scale(1.08);
+    outline: 3px solid #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.perfil:hover .nome-perfil {
+    color: #fff;
+}
+
+/* ---------- GERENCIAR ---------- */
+
+.gerenciar {
+    margin-top: 20px;
+}
+
+.botao-gerenciar {
+    background: transparent;
+    border: 1px solid #808080;
+    color: #808080;
+    padding: 12px 40px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao-gerenciar:hover {
+     border-color: #fff;
+    color: #fff;
+}
+
+@media (max-width: 480px) {
+
+    body {
+        min-height: 100vh;
+        height: auto; /* 👈 ESSENCIAL */
+        align-items: flex-start;
+        padding-top: 30px;
+        background: radial-gradient(circle at center, #b20710 0%, #000 75%);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .logo-netflix {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .logo-netflix img {
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* 👇 PERFIS UM EMBAIXO DO OUTRO */
+    .lista-perfis {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-perfil {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .nome-perfil {
+        font-size: 1rem;
+    }
+
+    .botao-gerenciar {
+        padding: 10px 20px;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .logo-netflix {
+        left: 20px;
+        top: 20px;
+    }
+
+    .logo-netflix img {
+        width: 110px;
+    }
+
+    .item-perfil {
+        width: 25%;
+    }
+
+    .lista-perfis {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .item-perfil {
+        width: 18%;
+    }
+}
